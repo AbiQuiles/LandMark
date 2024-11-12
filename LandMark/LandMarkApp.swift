@@ -5,15 +5,16 @@
 //  Created by Abiezer Quiles on 11/5/24.
 //
 
-//Testing XCode GitHub integration 1
-
 import SwiftUI
 
 @main
 struct LandMarkApp: App {
+    @State private var modelData = ModelData()
+    
     var body: some Scene {
         WindowGroup {
-            LandmarkList()
+            LandmarkList().environment(modelData)
         }
     }
 }
+

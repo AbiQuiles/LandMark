@@ -26,13 +26,9 @@ struct LandmarkDetail: View {
             MapView(coordinate: landmark.locationCoordinate)
                 .frame(height: 300)
             
-            HStack {
-                CircleImage(image: landmark.image)
-                    .offset(y: -100)
-                    .padding(.bottom, -120)
-                FavoriteButton(isFavorite: isFavorite)
-                    .frame(alignment: .leading)
-            }
+            CircleImage(image: landmark.image)
+                .offset(y: -100)
+                .padding(.bottom, -120)
             
             VStack(alignment: .leading) {
                 
@@ -40,12 +36,19 @@ struct LandmarkDetail: View {
                     Text(landmark.name)
                         .font(.title)
                         .fontWeight(.semibold)
+                    
+                    Spacer()
+                    
+                    FavoriteButton(isFavorite: isFavorite)
+                        //.position(x: 14, y: 10)
                 }
                 
                 HStack {
                     Text(landmark.park)
                         .font(.subheadline)
+                    
                     Spacer()
+                    
                     Text(landmark.state)
                         .font(.subheadline)
                 }
@@ -58,9 +61,8 @@ struct LandmarkDetail: View {
                     .font(.title2)
                 
                 Text(landmark.description)
-            }
-            
-            .padding()
+                
+            }.padding()
         }
         
         Spacer()

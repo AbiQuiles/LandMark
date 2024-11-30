@@ -15,6 +15,7 @@ struct FavoriteButton: View {
             isFavorite.toggle()
         } label: {
             Label("Toggle Favorite", systemImage: isFavorite ? "star.fill" : "star")
+                .font(.system(size: 20))
                 .labelStyle(.iconOnly)
                 .foregroundStyle(isFavorite ? .yellow : .gray)
         }

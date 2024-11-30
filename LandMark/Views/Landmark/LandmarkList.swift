@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct LandmarkList: View {
-    @Environment(ModelData.self) var modelData //Permites the Observable in ModelData to be access
+    //Permites the Observable in ModelData to be access
+    @Environment(ModelData.self) var modelData
+    
     @State private var showFavoritesOnly = false
 
        var filteredLandmarks: [Landmark] {
@@ -34,7 +36,7 @@ struct LandmarkList: View {
                 FilterButton(filter: $showFavoritesOnly)
             }
         } detail: {
-            Text("Oh oooooh!!")
+            Text("Ooooh Nooo!!")
         }
     }
 }

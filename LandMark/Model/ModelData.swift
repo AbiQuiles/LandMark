@@ -7,14 +7,22 @@
 
 import Foundation
 
+//ModelData is the repositoty for the our data
 @Observable
 class ModelData {
     var landmarks: [Landmark] = load(filename: "landmarkData.json")
     var hikes: [Hike] = load(filename: "hikeData.json")
+    
+    var categories: [String: [Landmark]] {
+            Dictionary(
+                grouping: landmarks,
+                by: { $0.category.rawValue }
+            )
+        }
 }
 
 //TODO: Find a way to abstrac more the way we get `landmarks`
-var landmarks: [Landmark] = load(filename: "landmarkData.json")
+//var landmarks: [Landmark] = load(filename: "landmarkData.json")
 
 func load<T: Decodable>(filename: String) -> T {
     let data: Data

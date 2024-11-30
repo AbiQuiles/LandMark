@@ -22,6 +22,15 @@ struct Landmark: Hashable, Codable, Identifiable {
     var description: String
     var isFavorite: Bool
     
+    //This enums help use identify what type/category the landmark is.
+    //We grab the 'category' property id the data doc and check which of this cases is.
+    var category: Category
+       enum Category: String, CaseIterable, Codable {
+           case lakes = "Lakes"
+           case rivers = "Rivers"
+           case mountains = "Mountains"
+       }
+    
     private var imageName: String
     var image: Image {
         Image(imageName)

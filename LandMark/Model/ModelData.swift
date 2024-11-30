@@ -10,6 +10,7 @@ import Foundation
 @Observable
 class ModelData {
     var landmarks: [Landmark] = load(filename: "landmarkData.json")
+    var hikes: [Hike] = load(filename: "hikeData.json")
 }
 
 //TODO: Find a way to abstrac more the way we get `landmarks`

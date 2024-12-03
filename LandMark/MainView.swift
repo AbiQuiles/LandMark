@@ -14,7 +14,8 @@ struct MainView: View {
     var body: some View {
         VStack {
             if isActive {
-                LandmarkList().environment(modelData)
+                BottomNavigationMenu().environment(modelData)
+                //LandmarkList().environment(modelData)
             } else {
                 SplashScreen()
             }

@@ -21,6 +21,7 @@ struct Landmark: Hashable, Codable, Identifiable {
     var state: String
     var description: String
     var isFavorite: Bool
+    var isFeatured: Bool
     
     //This enums help use identify what type/category the landmark is.
     //We grab the 'category' property id the data doc and check which of this cases is.

@@ -15,10 +15,14 @@ struct CategoryFeatureRow: View {
             HStack(spacing: 20) {
                 ForEach(featuredLandmarks, id: \.self) { featureLandmark in
                     
-                    FeatureItem(
-                        image: featureLandmark.image,
-                        name: featureLandmark.name
-                    )
+                    NavigationLink {
+                        LandmarkDetail(landmark: featureLandmark)
+                    } label: {
+                        FeatureItem(
+                            image: featureLandmark.image,
+                            name: featureLandmark.name
+                        )
+                    }
                 }
             }
         }

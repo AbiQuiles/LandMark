@@ -16,6 +16,7 @@ struct CategoryHome: View {
         
         NavigationSplitView {
             List {
+                
                 CategoryFeatureRow(
                     featuredLandmarks: featuredLandmarks
                 ).listRowInsets(EdgeInsets())

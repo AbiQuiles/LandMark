@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct ProfileButton: View {
+    @Binding var navigate: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            navigate.toggle()
+        } label: {
+            Label(
+                "Profile Button",
+                systemImage: "person.circle"
+            )
+        }
     }
 }
 
 #Preview {
-    ProfileButton()
+    ProfileButton(navigate: .constant(false))
 }

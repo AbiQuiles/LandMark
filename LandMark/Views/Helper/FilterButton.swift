@@ -20,8 +20,6 @@ struct FilterButton: View {
                 "line.horizontal.3.decrease.circle.fill"
                 :"line.horizontal.3.decrease.circle"
             )
-            .labelStyle(.iconOnly)
-            .foregroundColor(.blue)
         }
     }
 }

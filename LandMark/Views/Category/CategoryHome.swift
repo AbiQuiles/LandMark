@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct CategoryHome: View {
+    //Permites the Observable in ModelData to be access
     @Environment(ModelData.self) var modelData
+    @State private var showingProfile = false
     
     var body: some View {
         let featuredLandmarks = modelData.features
@@ -36,7 +38,14 @@ struct CategoryHome: View {
                 }
             }
             
+            .listStyle(.inset)
             .navigationTitle("Featured")
+            .toolbar {
+                ProfileButton(navigate: $showingProfile)
+            }.sheet(isPresented: $showingProfile) {
+                ProfileHost()
+                    .environment(modelData)
+            }
         } detail: {
             Text("Select a Landmark")
         }

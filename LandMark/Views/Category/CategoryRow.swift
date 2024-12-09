@@ -45,10 +45,10 @@ struct CategoryItem: View {
             image
                 .resizable()
                 .frame(width: 155, height: 155)
-                .clipShape(RoundedRectangle(cornerRadius: 5))
+                .cornerRadius(5)
             
             Text(name)
-                .foregroundStyle(.blue)
+                .foregroundStyle(.primary)
         }
     }
 }

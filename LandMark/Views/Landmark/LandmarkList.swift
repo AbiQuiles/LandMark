@@ -10,7 +10,6 @@ import SwiftUI
 struct LandmarkList: View {
     //Permites the Observable in ModelData to be access
     @Environment(ModelData.self) var modelData
-    
     @State private var showFavoritesOnly = false
 
        var filteredLandmarks: [Landmark] {

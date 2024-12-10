@@ -18,10 +18,10 @@ struct Profile {
 
 
        enum Season: String, CaseIterable, Identifiable {
-           case spring = "🌷"
-           case summer = "🌞"
-           case autumn = "🍂"
-           case winter = "☃️"
+           case spring = "🌷 Spring"
+           case summer = "🌞 Summer"
+           case autumn = "🍂 Fall"
+           case winter = "☃️ Winter"
 
 
            var id: String { rawValue }

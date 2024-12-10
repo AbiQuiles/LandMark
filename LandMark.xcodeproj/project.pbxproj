@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		45ED06DA2D077B1E00A9A2F3 /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED06D92D077B1E00A9A2F3 /* ProfileEditor.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		4564DCB72CDAB56B007D91B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		4564DCA62CDAB569007D91B9 /* LandMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4564DCB62CDAB56B007D91B9 /* LandMarkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LandMarkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4564DCC02CDAB56B007D91B9 /* LandMarkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LandMarkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45ED06D92D077B1E00A9A2F3 /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		4564DC9D2CDAB569007D91B9 = {
 			isa = PBXGroup;
 			children = (
+				45ED06D92D077B1E00A9A2F3 /* ProfileEditor.swift */,
 				4564DCA82CDAB569007D91B9 /* LandMark */,
 				4564DCB92CDAB56B007D91B9 /* LandMarkTests */,
 				4564DCC32CDAB56B007D91B9 /* LandMarkUITests */,
@@ -236,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45ED06DA2D077B1E00A9A2F3 /* ProfileEditor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

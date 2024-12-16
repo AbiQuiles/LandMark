@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct CategoryHome: View {
     //Permites the Observable in ModelData to be access
     @Environment(ModelData.self) var modelData
@@ -19,6 +20,14 @@ struct CategoryHome: View {
         NavigationSplitView {
             List {
                 
+//Apple Implementation Using UIKit
+//                PageView(
+//                    pages: featuredLandmarks.map {
+//                        FeatureCard(landmark: $0)
+//                    }
+//                ).listRowInsets(EdgeInsets())
+                
+//Own Implementation
                 CategoryFeatureRow(
                     featuredLandmarks: featuredLandmarks
                 ).listRowInsets(EdgeInsets())
@@ -37,7 +46,6 @@ struct CategoryHome: View {
                     ).listRowInsets(EdgeInsets())
                 }
             }
-            
             .listStyle(.inset)
             .navigationTitle("Featured")
             .toolbar {
